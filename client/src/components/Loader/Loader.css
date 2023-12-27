@@ -1,0 +1,37 @@
+.loader_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  margin: 0;
+  margin-top: 100px;
+  background-color: transparent;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-15px);
+  }
+}
