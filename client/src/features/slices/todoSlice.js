@@ -10,7 +10,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { allTabs } from "../../components/Tabs";
 
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://todo-mern-app-90q6.onrender.com";
 
 // post action
 export const createTodo = createAsyncThunk("createTodo", async (data) => {
