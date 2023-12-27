@@ -5,7 +5,6 @@ import { manageSelectedTab } from "../features/slices/todoSlice";
 const Tab = ({ tab }) => {
   const dispatch = useDispatch();
   const { selectedTab } = useSelector((state) => state.todo);
-  console.log(selectedTab);
   return (
     <span>
       <button

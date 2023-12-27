@@ -5,8 +5,8 @@ export const allTabs = ["All Todos", "Active Todos", "Done Todos"];
 const Tabs = () => {
   return (
     <div>
-      {allTabs.map((tab) => (
-        <Tab tab={tab} />
+      {allTabs.map((tab, key) => (
+        <Tab key={key} tab={tab} />
       ))}
     </div>
   );

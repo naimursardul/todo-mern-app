@@ -65,13 +65,20 @@ const Todo = ({ todo }) => {
       </span>
       <span
         className="post_icon edit_icon"
-        onClick={() =>
-          todo.done === false
-            ? setToggleInput(!toggleInput)
-            : setToggleInput(toggleInput)
-        }
+        onClick={() => [
+          todo.done
+            ? setToggleInput(toggleInput)
+            : setToggleInput(!toggleInput),
+        ]}
       >
-        <FontAwesomeIcon icon={toggleInput ? faCheck : faEdit} />
+        {toggleInput ? (
+          <FontAwesomeIcon
+            icon={faCheck}
+            onClick={() => dispatch(updateTodo([todo._id, text]))}
+          />
+        ) : (
+          <FontAwesomeIcon icon={faEdit} />
+        )}
       </span>
     </li>
   );
