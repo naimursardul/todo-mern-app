@@ -1,4 +1,4 @@
-This is my first MERN project that I have workes on both ends. It was a great experience. A lot to learn from here. To live this project I used 'Netlify' for frontend and 'Render' for backend.
+This was my first MERN project that I had worked on both ends. It was a great experience. A lot from here, I learned. To live this project I used 'Netlify' for frontend and 'Render' for backend.
 
 ## Functionallities: 
 - Add todo
