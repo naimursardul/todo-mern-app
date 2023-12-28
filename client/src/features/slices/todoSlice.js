@@ -35,7 +35,7 @@ export const getTodo = createAsyncThunk("getTodo", async () => {
   }
 });
 
-// get single user
+// get single data action
 export const updateTodoDone = createAsyncThunk("updateTodoDone", async (id) => {
   try {
     const response = await axios.get(`${baseUrl}/todos/${id}`);
@@ -47,7 +47,7 @@ export const updateTodoDone = createAsyncThunk("updateTodoDone", async (id) => {
   }
 });
 
-// update user
+// update action
 export const updateTodo = createAsyncThunk("updateTodo", async ([id, data]) => {
   try {
     const response = await axios.put(`${baseUrl}/todos/${id}`, { data });
@@ -59,7 +59,7 @@ export const updateTodo = createAsyncThunk("updateTodo", async ([id, data]) => {
   }
 });
 
-// update user
+// delete action
 export const deleteTodo = createAsyncThunk("deleteTodo", async (id) => {
   try {
     const response = await axios.delete(`${baseUrl}/todos/${id}`);
