@@ -137,10 +137,17 @@ npm i mongoose
 Location: server/database/db.js
 
 ```js
+
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const USERNAME = process.env.DB_USERNAME;
+const PASSWORD = process.env.DB_PASSWORD;
 
 const Connection = () => {
-  const MONGODB_URL = `mongodb+srv://admin:naimur4030447@mern-todo.umea7bk.mongodb.net/?retryWrites=true&w=majority`;
+  const MONGODB_URL = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todo.umea7bk.mongodb.net/?retryWrites=true&w=majority`;
 
   mongoose.connect(MONGODB_URL);
 
@@ -156,6 +163,7 @@ const Connection = () => {
 };
 
 export default Connection;
+
 ```
 
 
